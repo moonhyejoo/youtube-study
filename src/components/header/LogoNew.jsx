@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Logo_new = () => {
+const LogoNew = () => {
     return (
         <h1 className="header__logo">
             <a href="/">
@@ -11,4 +11,4 @@ const Logo_new = () => {
     )
 }
 
-export default Logo_new
+export default LogoNew
