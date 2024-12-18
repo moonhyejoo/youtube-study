@@ -15,8 +15,8 @@ import { developerText } from '../data/developer';
 const Home = () => {
     return (
         <Main
-            title="Home > 웹스토리보이 유튜브"
-            description="웹스토리보이 유튜버 사이트에 오신 것을 환영합니다.">
+            title="Home > 유튜브 만들기 study"
+            description="리액트를 배워보자!">
             <Today />
             <Developer videos={developerText} title="😪 추천 개발자를 소개합니다." id="developer" />
             <VideoSlider videos={webdText} title="😮 웹디자인기능사 준비는 이걸로!" id="webd" />

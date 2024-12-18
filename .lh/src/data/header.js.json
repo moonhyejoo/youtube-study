@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/data/header.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1734533719949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1734533719949,
+            "name": "Commit-0",
+            "content": "import { CiBaseball } from \"react-icons/ci\";\r\nimport { CiCoins1 } from \"react-icons/ci\";\r\nimport { CiBoxes } from \"react-icons/ci\";\r\nimport { CiBullhorn } from \"react-icons/ci\";\r\nimport { CiCoffeeCup } from \"react-icons/ci\";\r\nimport { CiDumbbell } from \"react-icons/ci\";\r\nimport { CiFries } from \"react-icons/ci\";\r\nimport { CiMoneyBill } from \"react-icons/ci\";\r\n\r\nimport { AiFillGithub } from \"react-icons/ai\";\r\nimport { AiOutlineCodepen } from \"react-icons/ai\";\r\nimport { AiFillYoutube } from \"react-icons/ai\";\r\nimport { AiOutlineInstagram } from \"react-icons/ai\";\r\n\r\nexport const headerMenus = [\r\n    {\r\n        title: \"유튜브 만들기 study\",\r\n        icon: <CiBaseball />,\r\n        src: \"/\"\r\n    },\r\n    {\r\n        title: \"추천 영상\",\r\n        icon: <CiMoneyBill />,\r\n        src: \"/today\"\r\n    },\r\n    {\r\n        title: \"추천 개발자\",\r\n        icon: <CiCoins1 />,\r\n        src: \"/developer\"\r\n    },\r\n    {\r\n        title: \"웹디자인기능사\",\r\n        icon: <CiBoxes />,\r\n        src: \"/webd\"\r\n    },\r\n    {\r\n        title: \"웹표준 사이트\",\r\n        icon: <CiBullhorn />,\r\n        src: \"/website\"\r\n    },\r\n    {\r\n        title: \"GSAP Parallax\",\r\n        icon: <CiCoffeeCup />,\r\n        src: \"/gsap\"\r\n    },\r\n    {\r\n        title: \"포트폴리오 사이트\",\r\n        icon: <CiDumbbell />,\r\n        src: \"/port\"\r\n    },\r\n    {\r\n        title: \"유튜브 클론 사이트\",\r\n        icon: <CiFries />,\r\n        src: \"/youtube\"\r\n    },\r\n];\r\n\r\nexport const searchKeyword = [\r\n    {\r\n        title: \"webstoryboy\",\r\n        src: \"/search/webstoryboy\"\r\n    },\r\n    {\r\n        title: \"HTML\",\r\n        src: \"/search/html\"\r\n    },\r\n    {\r\n        title: \"CSS\",\r\n        src: \"/search/css\"\r\n    },\r\n    {\r\n        title: \"JavaScript\",\r\n        src: \"/search/javascript\"\r\n    },\r\n    {\r\n        title: \"React.js\",\r\n        src: \"/search/react.js\"\r\n    },\r\n    {\r\n        title: \"Vue.js\",\r\n        src: \"/search/vue.js\"\r\n    },\r\n    {\r\n        title: \"Next.js\",\r\n        src: \"/search/next.js\"\r\n    },\r\n    {\r\n        title: \"Node.js\",\r\n        src: \"/search/node.js\"\r\n    },\r\n    {\r\n        title: \"SQL\",\r\n        src: \"/search/sql\"\r\n    },\r\n    {\r\n        title: \"portfolio\",\r\n        src: \"/search/React Portfolio\"\r\n    },\r\n    {\r\n        title: \"music\",\r\n        src: \"/search/NewJeans\"\r\n    }\r\n];\r\n\r\nexport const snsLink = [\r\n    {\r\n        title: \"github\",\r\n        url: \"https://github.com/webstoryboy\",\r\n        icon: <AiFillGithub />\r\n    },\r\n    {\r\n        title: \"youtube\",\r\n        url: \"https://www.youtube.com/webstoryboy\",\r\n        icon: <AiFillYoutube />\r\n    },\r\n    {\r\n        title: \"codepen\",\r\n        url: \"https://codepen.io/webstoryboy\",\r\n        icon: <AiOutlineCodepen />\r\n    },\r\n    {\r\n        title: \"instagram\",\r\n        url: \"https://www.instagram.com/webstoryboy\",\r\n        icon: <AiOutlineInstagram />\r\n    },\r\n]"
+        }
+    ]
+}
