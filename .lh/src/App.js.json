@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/App.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1734531400180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1734531400180,
+            "name": "Commit-0",
+            "content": "import React, { Suspense, lazy } from 'react'\nimport { BrowserRouter, Route, Routes } from 'react-router-dom';\n\n//import Main from \"./components/section/Main\";\n\nconst Home = lazy(() => import('./pages/Home'));\nconst Today = lazy(() => import('./pages/Today'));\nconst Developer = lazy(() => import('./pages/Developer'));\nconst Webd = lazy(() => import('./pages/Webd'));\nconst Website = lazy(() => import('./pages/Website'));\nconst Gsap = lazy(() => import('./pages/Gsap'));\nconst Port = lazy(() => import('./pages/Port'));\nconst Youtube = lazy(() => import('./pages/Youtube'));\nconst Channel = lazy(() => import('./pages/Channel'));\nconst Video = lazy(() => import('./pages/Video'));\nconst Search = lazy(() => import('./pages/Search'));\nconst Not = lazy(() => import('./pages/Not'));\n\n\nconst App = () => {\n    return (\n        <BrowserRouter>\n            {/* 비동기 컴포넌트가 로딩 중일 때 사용자에게 대체 ui를 보여주는데 사용*/}\n            {/* 컴포넌트가 로딩 중일 떄 fallback으로 지정된 ui를 표시함 */}\n            <Suspense fallback={<div>Loading...</div>}>\n                <Routes>\n                    <Route path='/' element={<Home />} />\n                    <Route path='/today' element={<Today />} />\n                    <Route path='/developer' element={<Developer />} />\n                    <Route path='/webd' element={<Webd />} />\n                    <Route path='/website' element={<Website />} />\n                    <Route path='/gsap' element={<Gsap />} />\n                    <Route path='/port' element={<Port />} />\n                    <Route path='/youtube' element={<Youtube />} />\n                    <Route path='/channel/:channelId' element={<Channel />} />\n                    <Route path='/video/:videoId' element={<Video />} />\n                    <Route path='/search/:searchId' element={<Search />} />\n                    <Route path='/*' element={<Not />} />\n                </Routes>\n            </Suspense>\n        </BrowserRouter>\n    )\n}\n\nexport default App\n"
+        }
+    ]
+}
