@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/pages/Developer.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1734445359249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734445371386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n const Developer = () => {\r\n     return (\r\n         <Main\r\n-            title=\"추천 개발자\"\r\n+            title=\"Developer > 추천 개발자\"\r\n             description=\"오늘의 추천 개발자 유튜버입니다.\">\r\n             Developer\r\n         </Main>\r\n     )\r\n"
+                },
+                {
+                    "date": 1734445377075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     return (\r\n         <Main\r\n             title=\"Developer > 추천 개발자\"\r\n             description=\"오늘의 추천 개발자 유튜버입니다.\">\r\n-            Developer\r\n+            <h2>🥰 오늘의 추천 개발자입니다.</h2>\r\n         </Main>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1734445388698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,24 @@\n         <Main\r\n             title=\"Developer > 추천 개발자\"\r\n             description=\"오늘의 추천 개발자 유튜버입니다.\">\r\n             <h2>🥰 오늘의 추천 개발자입니다.</h2>\r\n+            <div className=\"developer__inner\">\r\n+                    {developerText.map((developer, key) => (\r\n+                        <div className=\"developer\" key={key}>\r\n+                            <div className=\"developer__img play__icon\">\r\n+                                <Link to={`/channel/${developer.channelId}`}>\r\n+                                    <img src={developer.img} alt={developer.name} />\r\n+                                </Link>\r\n+                            </div>\r\n+                            <div className=\"developer__info\">\r\n+                                <Link to={`/channel/${developer.channelId}`}>\r\n+                                    {developer.name}\r\n+                                </Link>\r\n+                            </div>\r\n+                        </div>\r\n+                    ))}\r\n+                </div>\r\n         </Main>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1734445470696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,17 +9,17 @@\n         <Main\r\n             title=\"Developer > 추천 개발자\"\r\n             description=\"오늘의 추천 개발자 유튜버입니다.\">\r\n             <h2>🥰 오늘의 추천 개발자입니다.</h2>\r\n-            <div className=\"developer__inner\">\r\n+            <div className=\"developer-inner\">\r\n                 {developerText.map((developer, key) => (\r\n                     <div className=\"developer\" key={key}>\r\n-                        <div className=\"developer__img play__icon\">\r\n+                        <div className=\"developer-img play-icon\">\r\n                             <Link to={`/channel/${developer.channelId}`}>\r\n                                 <img src={developer.img} alt={developer.name} />\r\n                             </Link>\r\n                         </div>\r\n-                        <div className=\"developer__info\">\r\n+                        <div className=\"developer-info\">\r\n                             <Link to={`/channel/${developer.channelId}`}>\r\n                                 {developer.name}\r\n                             </Link>\r\n                         </div>\r\n"
+                },
+                {
+                    "date": 1734445504356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n     return (\r\n         <Main\r\n             title=\"Developer > 추천 개발자\"\r\n             description=\"오늘의 추천 개발자 유튜버입니다.\">\r\n+            <section id=\"developerPage\">\r\n             <h2>🥰 오늘의 추천 개발자입니다.</h2>\r\n             <div className=\"developer-inner\">\r\n                 {developerText.map((developer, key) => (\r\n                     <div className=\"developer\" key={key}>\r\n@@ -25,8 +26,10 @@\n                         </div>\r\n                     </div>\r\n                 ))}\r\n             </div>\r\n+            </section>\r\n+            \r\n         </Main>\r\n     )\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1734445359249,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport Main from '../components/section/Main'\r\n\r\nimport { developerText } from \"../data/developer\"\r\nimport { Link } from \"react-router-dom\"\r\n\r\nconst Developer = () => {\r\n    return (\r\n        <Main\r\n            title=\"추천 개발자\"\r\n            description=\"오늘의 추천 개발자 유튜버입니다.\">\r\n            Developer\r\n        </Main>\r\n    )\r\n}\r\n\r\nexport default Developer\r\n"
+        }
+    ]
+}

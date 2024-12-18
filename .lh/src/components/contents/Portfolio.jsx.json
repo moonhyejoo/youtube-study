@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/contents/Portfolio.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1734447547358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734447564086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,17 @@\n-import React from 'react'\r\n+import React from \"react\"\r\n \r\n-import { portfolioText } from '../../data/portfolio'\r\n-import { Link } from 'react-router-dom'\r\n+import { portfolioText } from \"../../data/portfolio\"\r\n+import { Link } from \"react-router-dom\"\r\n \r\n const Portfolio = () => {\r\n     return (\r\n-        <section id='portfolio'>\r\n+        <section id=\"portfolio\">\r\n             <h2>🤗 포트폴리오 만드는 방법을 공유합니다.</h2>\r\n-            <div className='video__inner'>\r\n+            <div className=\"video-inner\">\r\n                 {portfolioText.map((video, key) => (\r\n                     <div className=\"video\" key={key}>\r\n-                        <div className=\"video__thumb play__icon\">\r\n+                        <div className=\"video-thumb play-icon\">\r\n                             <Link to={`/video/${video.videoId}`}>\r\n                                 <img src={video.img} alt={video.title} />\r\n                             </Link>\r\n                         </div>\r\n"
+                }
+            ],
+            "date": 1734447547358,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nimport { portfolioText } from '../../data/portfolio'\r\nimport { Link } from 'react-router-dom'\r\n\r\nconst Portfolio = () => {\r\n    return (\r\n        <section id='portfolio'>\r\n            <h2>🤗 포트폴리오 만드는 방법을 공유합니다.</h2>\r\n            <div className='video__inner'>\r\n                {portfolioText.map((video, key) => (\r\n                    <div className=\"video\" key={key}>\r\n                        <div className=\"video__thumb play__icon\">\r\n                            <Link to={`/video/${video.videoId}`}>\r\n                                <img src={video.img} alt={video.title} />\r\n                            </Link>\r\n                        </div>\r\n                    </div>\r\n                ))}\r\n            </div>\r\n        </section>\r\n    )\r\n}\r\n\r\nexport default Portfolio;"
+        }
+    ]
+}

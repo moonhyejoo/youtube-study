@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/section/Main.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1734441994433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1734441994433,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport Header from \"./Header\"\r\nimport Footer from \"./Footer\";\r\nimport { Helmet, HelmetProvider } from \"react-helmet-async\";\r\nimport Search from \"./Search\";\r\n\r\n\r\nconst Main = (props) => {\r\n    return (\r\n        <HelmetProvider>\r\n            <Helmet\r\n                titleTemplate=\"%s | Webs Youtube\"\r\n                defaultTitle=\"기본타이틀\"\r\n                defer={false}\r\n            >\r\n                {props.title && <title>{props.title}</title>}\r\n                <meta name=\"description\" content={props.description} />\r\n            </Helmet>\r\n            <Header />\r\n            <main id=\"main\" role=\"main\">\r\n\r\n                {props.children}\r\n            </main>\r\n            <Footer />\r\n\r\n        </HelmetProvider >\r\n\r\n\r\n\r\n    )\r\n}\r\n\r\nexport default Main\r\n"
+        }
+    ]
+}

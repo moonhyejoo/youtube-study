@@ -1,0 +1,82 @@
+{
+    "sourceFile": "src/pages/Search.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1734523842473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734523884482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,16 @@\n import React from 'react'\r\n import Main from '../components/section/Main'\r\n+import VideoSearch from '../components/video/VideoSearch'\r\n \r\n const Search = () => {\r\n     return (\r\n         <Main\r\n             title=\"유투브 검색\"\r\n             description=\"유튜브 검색 결과 페이지입니다.\">\r\n             <section id=\"searchPage\">\r\n                 <div className=\"video-inner search\">\r\n-                    <VideoSearch />\r\n+                    <VideoSearch\r\n                 </div>\r\n             </section>\r\n         </Main>\r\n     )\r\n"
+                },
+                {
+                    "date": 1734523916576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,18 @@\n import React from 'react'\r\n import Main from '../components/section/Main'\r\n import VideoSearch from '../components/video/VideoSearch'\r\n+import { useParams } from 'react-router-dom'\r\n \r\n const Search = () => {\r\n+    const { searchid } = useParams;\r\n     return (\r\n         <Main\r\n             title=\"유투브 검색\"\r\n             description=\"유튜브 검색 결과 페이지입니다.\">\r\n             <section id=\"searchPage\">\r\n                 <div className=\"video-inner search\">\r\n-                    <VideoSearch\r\n+                    <VideoSearch />\r\n                 </div>\r\n             </section>\r\n         </Main>\r\n     )\r\n"
+                },
+                {
+                    "date": 1734523951343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n import VideoSearch from '../components/video/VideoSearch'\r\n import { useParams } from 'react-router-dom'\r\n \r\n const Search = () => {\r\n-    const { searchid } = useParams;\r\n+    const { searchid } = useParams();\r\n+    const [videos, serVideos] = useState();\r\n+\r\n     return (\r\n         <Main\r\n             title=\"유투브 검색\"\r\n             description=\"유튜브 검색 결과 페이지입니다.\">\r\n"
+                },
+                {
+                    "date": 1734523959725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React from 'react'\r\n+import React, { useState } from 'react'\r\n import Main from '../components/section/Main'\r\n import VideoSearch from '../components/video/VideoSearch'\r\n import { useParams } from 'react-router-dom'\r\n \r\n"
+                },
+                {
+                    "date": 1734523987427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,15 @@\n-import React, { useState } from 'react'\r\n+import React, { useEffect, useState } from 'react'\r\n import Main from '../components/section/Main'\r\n import VideoSearch from '../components/video/VideoSearch'\r\n import { useParams } from 'react-router-dom'\r\n \r\n const Search = () => {\r\n-    const { searchid } = useParams();\r\n-    const [videos, serVideos] = useState();\r\n+    const { searchId } = useParams();\r\n+    const [videos, serVideos] = useState([]);\r\n \r\n+    useEffect(() => { }, [searchId])\r\n+\r\n     return (\r\n         <Main\r\n             title=\"유투브 검색\"\r\n             description=\"유튜브 검색 결과 페이지입니다.\">\r\n"
+                },
+                {
+                    "date": 1734524428101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,11 @@\n const Search = () => {\r\n     const { searchId } = useParams();\r\n     const [videos, serVideos] = useState([]);\r\n \r\n-    useEffect(() => { }, [searchId])\r\n+    useEffect(() => {\r\n+        fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=react&type=video&key=AIzaSyCElYTLL8YkEqJXKyVR1isC5Cff47o7zKk')\r\n+    }, [searchId])\r\n \r\n     return (\r\n         <Main\r\n             title=\"유투브 검색\"\r\n"
+                },
+                {
+                    "date": 1734524503594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,13 @@\n     const [videos, serVideos] = useState([]);\r\n \r\n     useEffect(() => {\r\n         fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=react&type=video&key=AIzaSyCElYTLL8YkEqJXKyVR1isC5Cff47o7zKk')\r\n+            .then(response => response.json())\r\n+            .then(result => {\r\n+                console.log(result)\r\n+            })\r\n+            .catch(error => console.log(error))\r\n     }, [searchId])\r\n \r\n     return (\r\n         <Main\r\n"
+                },
+                {
+                    "date": 1734524559487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     const { searchId } = useParams();\r\n     const [videos, serVideos] = useState([]);\r\n \r\n     useEffect(() => {\r\n-        fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=react&type=video&key=AIzaSyCElYTLL8YkEqJXKyVR1isC5Cff47o7zKk')\r\n+        fetch('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&key=AIzaSyCElYTLL8YkEqJXKyVR1isC5Cff47o7zKk')\r\n             .then(response => response.json())\r\n             .then(result => {\r\n                 console.log(result)\r\n             })\r\n"
+                },
+                {
+                    "date": 1734524606450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     const { searchId } = useParams();\r\n     const [videos, serVideos] = useState([]);\r\n \r\n     useEffect(() => {\r\n-        fetch('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&key=AIzaSyCElYTLL8YkEqJXKyVR1isC5Cff47o7zKk')\r\n+        fetch('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&key=')\r\n             .then(response => response.json())\r\n             .then(result => {\r\n                 console.log(result)\r\n             })\r\n"
+                },
+                {
+                    "date": 1734524670938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     const { searchId } = useParams();\r\n     const [videos, serVideos] = useState([]);\r\n \r\n     useEffect(() => {\r\n-        fetch('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&key=')\r\n+        fetch('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}')\r\n             .then(response => response.json())\r\n             .then(result => {\r\n                 console.log(result)\r\n             })\r\n"
+                },
+                {
+                    "date": 1734524684510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+import React, { useEffect, useState } from 'react'\r\n+import Main from '../components/section/Main'\r\n+import VideoSearch from '../components/video/VideoSearch'\r\n+import { useParams } from 'react-router-dom'\r\n+\r\n+const Search = () => {\r\n+    const { searchId } = useParams();\r\n+    const [videos, serVideos] = useState([]);\r\n+\r\n+    useEffect(() => {\r\n+        fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)\r\n+            .then(response => response.json())\r\n+            .then(result => {\r\n+                console.log(result)\r\n+            })\r\n+            .catch(error => console.log(error))\r\n+    }, [searchId])\r\n+\r\n+    return (\r\n+        <Main\r\n+            title=\"유투브 검색\"\r\n+            description=\"유튜브 검색 결과 페이지입니다.\">\r\n+            <section id=\"searchPage\">\r\n+                <div className=\"video-inner search\">\r\n+                    <VideoSearch />\r\n+                </div>\r\n+            </section>\r\n+        </Main>\r\n+    )\r\n+}\r\n+\r\n+export default Search\r\n"
+                },
+                {
+                    "date": 1734524796266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     const { searchId } = useParams();\r\n     const [videos, serVideos] = useState([]);\r\n \r\n     useEffect(() => {\r\n-        fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)\r\n+        fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=50&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)\r\n             .then(response => response.json())\r\n             .then(result => {\r\n                 console.log(result)\r\n             })\r\n@@ -29,36 +29,4 @@\n     )\r\n }\r\n \r\n export default Search\r\n-import React, { useEffect, useState } from 'react'\r\n-import Main from '../components/section/Main'\r\n-import VideoSearch from '../components/video/VideoSearch'\r\n-import { useParams } from 'react-router-dom'\r\n-\r\n-const Search = () => {\r\n-    const { searchId } = useParams();\r\n-    const [videos, serVideos] = useState([]);\r\n-\r\n-    useEffect(() => {\r\n-        fetch('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}')\r\n-            .then(response => response.json())\r\n-            .then(result => {\r\n-                console.log(result)\r\n-            })\r\n-            .catch(error => console.log(error))\r\n-    }, [searchId])\r\n-\r\n-    return (\r\n-        <Main\r\n-            title=\"유투브 검색\"\r\n-            description=\"유튜브 검색 결과 페이지입니다.\">\r\n-            <section id=\"searchPage\">\r\n-                <div className=\"video-inner search\">\r\n-                    <VideoSearch />\r\n-                </div>\r\n-            </section>\r\n-        </Main>\r\n-    )\r\n-}\r\n-\r\n-export default Search\r\n"
+                },
+                {
+                    "date": 1734524947754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     const { searchId } = useParams();\r\n     const [videos, serVideos] = useState([]);\r\n \r\n     useEffect(() => {\r\n-        fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=50&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)\r\n+        fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=50&q=${searchId}key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)\r\n             .then(response => response.json())\r\n             .then(result => {\r\n                 console.log(result)\r\n             })\r\n"
+                },
+                {
+                    "date": 1734524975405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n         fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=50&q=${searchId}key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)\r\n             .then(response => response.json())\r\n             .then(result => {\r\n                 console.log(result)\r\n+                serVideos(result.items)\r\n             })\r\n             .catch(error => console.log(error))\r\n     }, [searchId])\r\n \r\n"
+                },
+                {
+                    "date": 1734524987507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n             title=\"유투브 검색\"\r\n             description=\"유튜브 검색 결과 페이지입니다.\">\r\n             <section id=\"searchPage\">\r\n                 <div className=\"video-inner search\">\r\n-                    <VideoSearch />\r\n+                    <VideoSearch videos={videos} />\r\n                 </div>\r\n             </section>\r\n         </Main>\r\n     )\r\n"
+                },
+                {
+                    "date": 1734525085794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     const { searchId } = useParams();\r\n     const [videos, serVideos] = useState([]);\r\n \r\n     useEffect(() => {\r\n-        fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=50&q=${searchId}key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)\r\n+        fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=48&q=${searchId}&type=video&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)\r\n             .then(response => response.json())\r\n             .then(result => {\r\n                 console.log(result)\r\n                 serVideos(result.items)\r\n"
+                }
+            ],
+            "date": 1734523842473,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport Main from '../components/section/Main'\r\n\r\nconst Search = () => {\r\n    return (\r\n        <Main\r\n            title=\"유투브 검색\"\r\n            description=\"유튜브 검색 결과 페이지입니다.\">\r\n            <section id=\"searchPage\">\r\n                <div className=\"video-inner search\">\r\n                    <VideoSearch />\r\n                </div>\r\n            </section>\r\n        </Main>\r\n    )\r\n}\r\n\r\nexport default Search\r\n"
+        }
+    ]
+}

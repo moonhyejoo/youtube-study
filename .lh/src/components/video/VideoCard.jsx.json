@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/components/video/VideoCard.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1734452649374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734452882993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,20 @@\n import React from 'react'\r\n \r\n-const VideoCard = () => {\r\n-  return (\r\n-    <div>\r\n-      \r\n-    </div>\r\n-  )\r\n+const VideoCard = ({ videos }) => {\r\n+    return (\r\n+        <>\r\n+            {videos.map((video, key) => (\r\n+                <div className=\"video\">\r\n+                    <div className=\"video-thumb play-icon\">\r\n+                        <Link to={`/video/${video.videoId}`}>\r\n+                            <img src={video.img} alt={video.title} />\r\n+                        </Link>\r\n+                    </div>\r\n+                </div>\r\n+            ))}\r\n+        </>\r\n+\r\n+    )\r\n }\r\n \r\n export default VideoCard\r\n"
+                },
+                {
+                    "date": 1734452936803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import React from 'react'\r\n+import { Link } from \"react-router-dom\";\r\n \r\n const VideoCard = ({ videos }) => {\r\n     return (\r\n         <>\r\n"
+                },
+                {
+                    "date": 1734453021168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,19 +3,19 @@\n \r\n const VideoCard = ({ videos }) => {\r\n     return (\r\n         <>\r\n-            {videos.map((video, key) => (\r\n-                <div className=\"video\" key={key}>\r\n-                    <div className=\"video-thumb play-icon\">\r\n+            {videos.map((video, index) => (\r\n+                <div className=\"video\" key={index}>\r\n+                    <div className=\"video__thumb play__icon\">\r\n                         <Link to={`/video/${video.videoId}`}>\r\n-                            <img src={video.img} alt={video.title} />\r\n+                            <img src={video.img} alt={videos.title} />\r\n                         </Link>\r\n                     </div>\r\n+                    \r\n                 </div>\r\n             ))}\r\n         </>\r\n-\r\n     )\r\n }\r\n \r\n export default VideoCard\r\n"
+                }
+            ],
+            "date": 1734452649374,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst VideoCard = () => {\r\n  return (\r\n    <div>\r\n      \r\n    </div>\r\n  )\r\n}\r\n\r\nexport default VideoCard\r\n"
+        }
+    ]
+}

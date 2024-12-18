@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/assets/scss/section/_today.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1734440766397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734440774177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n-.today__inner {\r\n+.today-inner {\r\n     display: flex;\r\n     background-color: var(--black100);\r\n     margin-bottom: 3.125rem;\r\n }\r\n \r\n-.today__thumb {\r\n+.today-thumb {\r\n     width: 40%;\r\n }\r\n \r\n-.today__text {\r\n+.today-text {\r\n     width: 60%;\r\n     padding: 2rem;\r\n \r\n     .today {\r\n@@ -50,14 +50,14 @@\n     }\r\n }\r\n \r\n @media (max-width: 1700px) {\r\n-    .today__inner {\r\n-        .today__thumb {\r\n+    .today-inner {\r\n+        .today-thumb {\r\n             width: 500px;\r\n         }\r\n \r\n-        .today__text {\r\n+        .today-text {\r\n             width: calc(100% - 500px);\r\n \r\n             .desc {\r\n                 @include line(2);\r\n@@ -66,16 +66,16 @@\n     }\r\n }\r\n \r\n @media (max-width: 1200px) {\r\n-    .today__inner {\r\n+    .today-inner {\r\n         flex-direction: column;\r\n \r\n-        .today__thumb {\r\n+        .today-thumb {\r\n             width: 100%;\r\n         }\r\n \r\n-        .today__text {\r\n+        .today-text {\r\n             width: 100%;\r\n \r\n             .title {\r\n                 font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1734441206455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,6 +94,4 @@\n     #today {\r\n         margin-top: 80px;\r\n     }\r\n }\r\n-\r\n-출처: https: //webstoryboy.co.kr/1975 [WEBSTORYBOY:티스토리]\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1734440766397,
+            "name": "Commit-0",
+            "content": ".today__inner {\r\n    display: flex;\r\n    background-color: var(--black100);\r\n    margin-bottom: 3.125rem;\r\n}\r\n\r\n.today__thumb {\r\n    width: 40%;\r\n}\r\n\r\n.today__text {\r\n    width: 60%;\r\n    padding: 2rem;\r\n\r\n    .today {\r\n        background-color: #f00;\r\n        padding: 2px 50px;\r\n        border-radius: 20px;\r\n        text-transform: uppercase;\r\n        margin-bottom: 10px;\r\n        display: inline-block;\r\n    }\r\n    .title {\r\n        font-size: 2rem;\r\n        margin-bottom: 1rem;\r\n        @include line-one;\r\n    }\r\n    .desc {\r\n        margin-bottom: 1rem;\r\n        color: var(--white200);\r\n        @include line(4)\r\n    }\r\n        \r\n    .info {\r\n        .author {\r\n            font-size: 1rem;\r\n            margin-right: 10px;\r\n            font-weight: 900;\r\n            text-decoration: underline;\r\n            text-underline-position: under;\r\n            text-transform: uppercase;\r\n        }\r\n        .date {\r\n            font-style: 0.8rem;\r\n            color: var(--white200);\r\n        }\r\n    }\r\n} \r\n\r\n@media (max-width: 1700px){\r\n    .today__inner {\r\n        .today__thumb {\r\n            width: 500px;\r\n        }\r\n        .today__text {\r\n            width: calc(100% - 500px);\r\n\r\n            .desc {\r\n                @include line(2);\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n@media (max-width: 1200px){\r\n    .today__inner {\r\n        flex-direction: column;\r\n\r\n        .today__thumb {\r\n            width: 100%;\r\n        }\r\n        .today__text {\r\n            width: 100%;\r\n\r\n            .title {\r\n                font-size: 24px;\r\n            }\r\n\r\n            .desc {\r\n                display: none;\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n@media (max-width: 800px){\r\n    #todayPage,\r\n    #today {\r\n        margin-top: 80px;\r\n    }\r\n}\r\n출처: https://webstoryboy.co.kr/1975 [WEBSTORYBOY:티스토리]"
+        }
+    ]
+}

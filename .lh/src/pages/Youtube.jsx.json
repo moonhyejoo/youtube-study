@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/pages/Youtube.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1734441421016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734519336280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,14 @@\n     return (\r\n         <Main\r\n             title=\"유튜브 사이트\"\r\n             description=\"유튜브 사이트 튜토리얼 강의입니다.\">\r\n-            Youtube\r\n+            <section id=\"youtubePage\" className={youtubeClass}>\r\n+                <h2>😛 웹표준 사이트 만들기 기초 다지기</h2>\r\n+                <div className=\"video-inner\">\r\n+                    <VideoCards videos={youtubeText} />\r\n+                </div>\r\n+            </section>\r\n         </Main>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1734519356719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <Main\r\n             title=\"유튜브 사이트\"\r\n             description=\"유튜브 사이트 튜토리얼 강의입니다.\">\r\n             <section id=\"youtubePage\" className={youtubeClass}>\r\n-                <h2>😛 웹표준 사이트 만들기 기초 다지기</h2>\r\n+                <h2>😱 지금 이 코딩을 영상으로</h2>\r\n                 <div className=\"video-inner\">\r\n                     <VideoCards videos={youtubeText} />\r\n                 </div>\r\n             </section>\r\n"
+                },
+                {
+                    "date": 1734519415737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+import React from 'react'\r\n+import Main from '../components/section/Main'\r\n+\r\n+import VideoCards from \"../components/video/VideoCard\"\r\n+import { youtubeText } from \"../data/youtube\"\r\n+\r\n+\r\n+const Youtube = () => {\r\n+    return (\r\n+        <Main\r\n+            title=\"유튜브 사이트\"\r\n+            description=\"유튜브 사이트 튜토리얼 강의입니다.\">\r\n+            <section id=\"youtubePage\" className={youtubeClass}>\r\n+                <h2>😱 지금 이 코딩을 영상으로</h2>\r\n+                <div className=\"video-inner\">\r\n+                    <VideoCards videos={youtubeText} />\r\n+                </div>\r\n+            </section>\r\n+        </Main>\r\n+    )\r\n+}\r\n+\r\n+export default Youtube\r\n"
+                },
+                {
+                    "date": 1734519520065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,20 @@\n import { youtubeText } from \"../data/youtube\"\r\n \r\n \r\n const Youtube = () => {\r\n+\r\n+    const [loading, setLoading] = useState(true);\r\n+\r\n+    useEffect(() => {\r\n+        setTimeout(() => {\r\n+            setLoading(false);\r\n+        }, 300);\r\n+    }, []);\r\n+\r\n+    const youtubeClass = loading ? \"isLoading\" : \"isLoaded\";\r\n+\r\n+\r\n     return (\r\n         <Main\r\n             title=\"유튜브 사이트\"\r\n             description=\"유튜브 사이트 튜토리얼 강의입니다.\">\r\n"
+                },
+                {
+                    "date": 1734519526040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React from 'react'\r\n+import React, { useEffect, useState }  from 'react'\r\n import Main from '../components/section/Main'\r\n \r\n import VideoCards from \"../components/video/VideoCard\"\r\n import { youtubeText } from \"../data/youtube\"\r\n"
+                }
+            ],
+            "date": 1734441421016,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport Main from '../components/section/Main'\r\n\r\nconst Youtube = () => {\r\n    return (\r\n        <Main\r\n            title=\"유튜브 사이트\"\r\n            description=\"유튜브 사이트 튜토리얼 강의입니다.\">\r\n            Youtube\r\n        </Main>\r\n    )\r\n}\r\n\r\nexport default Youtube\r\n"
+        }
+    ]
+}

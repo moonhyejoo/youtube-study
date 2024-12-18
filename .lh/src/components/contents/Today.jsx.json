@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/components/contents/Today.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1734440575473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734440617556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,27 +1,29 @@\n-import React from 'react'\r\n+import React from \"react\"\r\n import { todayText } from \"../../data/Today\";\r\n+import { Link } from \"react-router-dom\";\r\n \r\n const Today = () => {\r\n     return (\r\n         <section id=\"today\">\r\n             <div className=\"today-inner\">\r\n                 <div className=\"today-thumb play-icon\">\r\n+                    \r\n                     <Link to={todayText[0].page}>\r\n                         <img src={todayText[0].img} alt={todayText[0].title} />\r\n                     </Link>\r\n                 </div>\r\n-                <div className='today__text'>\r\n-                    <span className='today'>today!</span>\r\n-                    <h3 className='title'>\r\n+                <div className=\"today__text\">\r\n+                    <span className=\"today\">today!</span>\r\n+                    <h3 className=\"title\">\r\n                         <Link to={todayText[0].page}>{todayText[0].title}</Link>\r\n                     </h3>\r\n-                    <p className='desc'>{todayText[0].desc}</p>\r\n-                    <div className='info'>\r\n-                        <span className='author'>\r\n+                    <p className=\"desc\">{todayText[0].desc}</p>\r\n+                    <div className=\"info\">\r\n+                        <span className=\"author\">\r\n                             <Link to={`/channel/${todayText[0].channelId}`}>{todayText[0].author}</Link>\r\n                         </span>\r\n-                        <span className='date'>{todayText[0].date}</span>\r\n+                        <span className=\"date\">{todayText[0].date}</span>\r\n                     </div>\r\n                 </div>\r\n             </div>\r\n         </section>\r\n"
+                },
+                {
+                    "date": 1734440914787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n     return (\r\n         <section id=\"today\">\r\n             <div className=\"today-inner\">\r\n                 <div className=\"today-thumb play-icon\">\r\n-                    \r\n                     <Link to={todayText[0].page}>\r\n                         <img src={todayText[0].img} alt={todayText[0].title} />\r\n                     </Link>\r\n                 </div>\r\n"
+                },
+                {
+                    "date": 1734440926200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React from \"react\"\r\n+import React from \"react\";\r\n import { todayText } from \"../../data/Today\";\r\n import { Link } from \"react-router-dom\";\r\n \r\n const Today = () => {\r\n"
+                },
+                {
+                    "date": 1734440961504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import { todayText } from \"../../data/Today\";\r\n import { Link } from \"react-router-dom\";\r\n \r\n const Today = () => {\r\n+    console.log(todayText)\r\n     return (\r\n         <section id=\"today\">\r\n             <div className=\"today-inner\">\r\n                 <div className=\"today-thumb play-icon\">\r\n"
+                },
+                {
+                    "date": 1734440986094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { todayText } from \"../../data/Today\";\r\n import { Link } from \"react-router-dom\";\r\n \r\n const Today = () => {\r\n-    console.log(todayText)\r\n+    console.log(todayText[0].img)\r\n     return (\r\n         <section id=\"today\">\r\n             <div className=\"today-inner\">\r\n                 <div className=\"today-thumb play-icon\">\r\n"
+                },
+                {
+                    "date": 1734441041265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { todayText } from \"../../data/Today\";\r\n import { Link } from \"react-router-dom\";\r\n \r\n const Today = () => {\r\n-    console.log(todayText[0].img)\r\n+   \r\n     return (\r\n         <section id=\"today\">\r\n             <div className=\"today-inner\">\r\n                 <div className=\"today-thumb play-icon\">\r\n"
+                },
+                {
+                    "date": 1734441317904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from \"react\";\r\n-import { todayText } from \"../../data/Today\";\r\n+import { todayText } from \"../../data/today\";\r\n import { Link } from \"react-router-dom\";\r\n \r\n const Today = () => {\r\n \r\n"
+                },
+                {
+                    "date": 1734441353857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,9 @@\n import React from \"react\";\r\n-import { todayText } from \"../../data/today\";\r\n+import { todayText } from \"../../data/Today\";\r\n import { Link } from \"react-router-dom\";\r\n \r\n const Today = () => {\r\n-\r\n     return (\r\n         <section id=\"today\">\r\n             <div className=\"today-inner\">\r\n                 <div className=\"today-thumb play-icon\">\r\n"
+                }
+            ],
+            "date": 1734440575473,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport { todayText } from \"../../data/Today\";\r\n\r\nconst Today = () => {\r\n    return (\r\n        <section id=\"today\">\r\n            <div className=\"today-inner\">\r\n                <div className=\"today-thumb play-icon\">\r\n                    <Link to={todayText[0].page}>\r\n                        <img src={todayText[0].img} alt={todayText[0].title} />\r\n                    </Link>\r\n                </div>\r\n                <div className='today__text'>\r\n                    <span className='today'>today!</span>\r\n                    <h3 className='title'>\r\n                        <Link to={todayText[0].page}>{todayText[0].title}</Link>\r\n                    </h3>\r\n                    <p className='desc'>{todayText[0].desc}</p>\r\n                    <div className='info'>\r\n                        <span className='author'>\r\n                            <Link to={`/channel/${todayText[0].channelId}`}>{todayText[0].author}</Link>\r\n                        </span>\r\n                        <span className='date'>{todayText[0].date}</span>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n    )\r\n}\r\n\r\nexport default Today\r\n"
+        }
+    ]
+}

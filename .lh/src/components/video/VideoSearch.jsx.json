@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/components/video/VideoSearch.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1734524592363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734524865009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const VideoSearch = () => {\r\n     return (\r\n         <div>\r\n-\r\n+            검색결과\r\n         </div>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1734525135587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\r\n \r\n-const VideoSearch = () => {\r\n+const VideoSearch = ({ videos }) => {\r\n     return (\r\n         <div>\r\n             검색결과\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1734525206357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,15 @@\n import React from 'react'\r\n \r\n const VideoSearch = ({ videos }) => {\r\n     return (\r\n-        <div>\r\n-            검색결과\r\n-        </div>\r\n+        <>\r\n+            {vidoes.map((video, key) => (\r\n+                <div className=\"video\" key={key}>\r\n+                    <div className=\"video-thumb\"></div>\r\n+                </div>\r\n+            ))}\r\n+        </>\r\n     )\r\n }\r\n \r\n export default VideoSearch\r\n"
+                },
+                {
+                    "date": 1734525248640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,32 @@\n-import React from 'react'\r\n+import React from \"react\"\r\n+import { Link } from \"react-router-dom\"\r\n \r\n const VideoSearch = ({ videos }) => {\r\n     return (\r\n         <>\r\n-            {vidoes.map((video, key) => (\r\n-                <div className=\"video\" key={key}>\r\n-                    <div className=\"video-thumb\"></div>\r\n+            {videos.map((video, index) => (\r\n+                <div className=\"video\" key={index}>\r\n+                    <div className=\"video-thumb play-icon\">\r\n+                        <Link\r\n+                            to={`/video/${video.id.videoId}`}\r\n+                            style={{ backgroundImage: `url(${video.snippet.thumbnails.high.url})` }}>\r\n+                        </Link>\r\n+                    </div>\r\n+                    <div className=\"video-info\">\r\n+                        <div className=\"title\">\r\n+                            <Link to={`/video/${video.id.videoId}`}>{video.snippet.title}</Link>\r\n+                        </div>\r\n+                        <div className=\"info\">\r\n+                            <span className=\"author\">\r\n+                                <Link to={`/channel/${video.snippet.channelId}`}>{video.snippet.channelTitle}</Link>\r\n+                            </span>\r\n+                        </div>\r\n+                    </div>\r\n                 </div>\r\n             ))}\r\n         </>\r\n     )\r\n }\r\n \r\n export default VideoSearch\r\n+출처: https://webstoryboy.co.kr/1981 [WEBSTORYBOY:티스토리]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734525274806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,6 +27,5 @@\n         </>\r\n     )\r\n }\r\n \r\n-export default VideoSearch\r\n-출처: https://webstoryboy.co.kr/1981 [WEBSTORYBOY:티스토리]\n\\ No newline at end of file\n+export default VideoSearch\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734525293820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\"\r\n import { Link } from \"react-router-dom\"\r\n \r\n-const VideoSearch = ({ videos }) => {\r\n+const VideoSearch = ({ vidoes }) => {\r\n     return (\r\n         <>\r\n             {videos.map((video, index) => (\r\n                 <div className=\"video\" key={index}>\r\n"
+                },
+                {
+                    "date": 1734525306707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\"\r\n import { Link } from \"react-router-dom\"\r\n \r\n-const VideoSearch = ({ vidoes }) => {\r\n+const VideoSearch = ({ videos }) => {\r\n     return (\r\n         <>\r\n             {videos.map((video, index) => (\r\n                 <div className=\"video\" key={index}>\r\n"
+                }
+            ],
+            "date": 1734524592363,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst VideoSearch = () => {\r\n    return (\r\n        <div>\r\n\r\n        </div>\r\n    )\r\n}\r\n\r\nexport default VideoSearch\r\n"
+        }
+    ]
+}

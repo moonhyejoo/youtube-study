@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/pages/Home.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1734441855496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734441862310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     return (\r\n         <Main\r\n             title=\"웹스토리보이 유튜브\"\r\n             description=\"웹스토리보이 유튜버 사이트에 오신 것을 환영합니다.\">\r\n-\r\n+            <Today />\r\n             <Developer />\r\n             <Webd />\r\n             <Website />\r\n             <Gsap />\r\n"
+                },
+                {
+                    "date": 1734442030149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,18 @@\n-import React from 'react';\r\n-import Main from '../components/section/Main';\r\n-import Today from '../components/contents/Today';\r\n-import Developer from '../components/contents/Developer';\r\n-import Webd from '../components/contents/Webd';\r\n-import Website from '../components/contents/Website';\r\n-import Gsap from '../components/contents/Gsap';\r\n-import Portfolio from '../components/contents/Portfolio';\r\n-import Youtube from '../components/contents/Youtube';\r\n+import React from 'react'\r\n+import Main from '../components/section/Main'\r\n+import Today from '../components/contents/Today'\r\n+import Developer from '../components/contents/Developer'\r\n+import VideoSlider from '../components/video/VideoSlider'\r\n \r\n+import { webdText } from '../data/webd'\r\n+import { websiteText } from '../data/website'\r\n+import { gsapText } from '../data/gsap'\r\n+import { portfolioText } from '../data/portfolio'\r\n+import { youtubeText } from '../data/youtube'\r\n+import { developerText } from '../data/developer'\r\n+import { todayText } from '../data/today'\r\n+\r\n const Home = () => {\r\n     return (\r\n         <Main\r\n             title=\"웹스토리보이 유튜브\"\r\n"
+                }
+            ],
+            "date": 1734441855496,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\nimport Main from '../components/section/Main';\r\nimport Today from '../components/contents/Today';\r\nimport Developer from '../components/contents/Developer';\r\nimport Webd from '../components/contents/Webd';\r\nimport Website from '../components/contents/Website';\r\nimport Gsap from '../components/contents/Gsap';\r\nimport Portfolio from '../components/contents/Portfolio';\r\nimport Youtube from '../components/contents/Youtube';\r\n\r\nconst Home = () => {\r\n    return (\r\n        <Main\r\n            title=\"웹스토리보이 유튜브\"\r\n            description=\"웹스토리보이 유튜버 사이트에 오신 것을 환영합니다.\">\r\n           \r\n            <Developer />\r\n            <Webd />\r\n            <Website />\r\n            <Gsap />\r\n            <Portfolio />\r\n            <Youtube />\r\n        </Main>\r\n    )\r\n}\r\n\r\nexport default Home\r\n"
+        }
+    ]
+}

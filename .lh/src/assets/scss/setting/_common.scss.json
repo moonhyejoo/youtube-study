@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/assets/scss/setting/_common.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1734443753049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734443805739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,10 @@\n \r\n     @media (max-width:800) {\r\n         padding: 20px;\r\n     }\r\n+\r\n+\r\n+    h2{\r\n+        font-size:1.25rem\r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734443812699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,8 @@\n     }\r\n \r\n \r\n     h2 {\r\n-        font-size: 1.25rem\r\n+        font-size: 1.25rem;\r\n+        margin-bottom:1rem;\r\n     }\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1734443753049,
+            "name": "Commit-0",
+            "content": "body {\r\n    background-color: var(--black);\r\n    color: var(--white);\r\n}\r\n\r\nsection {\r\n    padding:40px;\r\n    @media (max-width:800){\r\n        padding:20px;\r\n    }\r\n}"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/assets/scss/style.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1734441174414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734441191772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+@charset \"UTF-8\";\r\n+\r\n+// setting\r\n+@import \"setting/fonts\";\r\n+@import \"setting/vars\";\r\n+@import \"setting/reset\";\r\n+@import \"setting/mixin\";\r\n+@import \"setting/common\";\r\n+\r\n+\r\n+// section\r\n+@import \"section/layout\";\r\n+@import \"section/header\";\r\n+@import \"section/search\";\r\n+@import \"section/today\";\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734441763323,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,4 @@\n // section\r\n @import \"section/layout\";\r\n @import \"section/header\";\r\n @import \"section/search\";\r\n-@import \"section/today\";\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734441782994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,6 @@\n \r\n // section\r\n @import \"section/layout\";\r\n @import \"section/header\";\r\n-@import \"section/search\";\n\\ No newline at end of file\n+@import \"section/search\";\r\n+@import \"section/today\";\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734445329765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,6 @@\n // section\r\n @import \"section/layout\";\r\n @import \"section/header\";\r\n @import \"section/search\";\r\n-@import \"section/today\";\n\\ No newline at end of file\n+@import \"section/today\";\r\n+@import \"section/developer\";\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734447158302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,6 @@\n @import \"section/layout\";\r\n @import \"section/header\";\r\n @import \"section/search\";\r\n @import \"section/today\";\r\n-@import \"section/developer\";\n\\ No newline at end of file\n+@import \"section/developer\";\r\n+@import \"section/webd\";\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734447238262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,19 +13,5 @@\n @import \"section/header\";\r\n @import \"section/search\";\r\n @import \"section/today\";\r\n @import \"section/developer\";\r\n-@import \"section/webd\";\n-@charset \"UTF-8\";\r\n-\r\n-// setting\r\n-@import \"setting/fonts\";\r\n-@import \"setting/vars\";\r\n-@import \"setting/reset\";\r\n-@import \"setting/mixin\";\r\n-@import \"setting/common\";\r\n-@import \"setting/today\";\r\n-\r\n-// section\r\n-@import \"section/layout\";\r\n-@import \"section/header\";\r\n-@import \"section/search\";\n\\ No newline at end of file\n+@import \"section/video\";\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1734441174414,
+            "name": "Commit-0",
+            "content": "@charset \"UTF-8\";\r\n\r\n// setting\r\n@import \"setting/fonts\";\r\n@import \"setting/vars\";\r\n@import \"setting/reset\";\r\n@import \"setting/mixin\";\r\n@import \"setting/common\";\r\n@import \"setting/today\";\r\n\r\n// section\r\n@import \"section/layout\";\r\n@import \"section/header\";\r\n@import \"section/search\";"
+        }
+    ]
+}

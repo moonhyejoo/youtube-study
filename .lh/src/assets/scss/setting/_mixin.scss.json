@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/assets/scss/setting/_mixin.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1734440876398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1734440876398,
+            "name": "Commit-0",
+            "content": "// 한줄 효과 \r\n@mixin line-one {\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n\r\n// 두줄 효과\r\n@mixin line-two {\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    display: -webkit-box;\r\n    -webkit-line-clamp: 2;\r\n    -webkit-box-orient: vertical;\r\n}\r\n\r\n// 두줄 이상\r\n@mixin line($num){\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    display: -webkit-box;\r\n    -webkit-line-clamp: $num;\r\n    -webkit-box-orient: vertical;\r\n}\r\n    \r\n출처: https://webstoryboy.co.kr/1975 [WEBSTORYBOY:티스토리]"
+        }
+    ]
+}

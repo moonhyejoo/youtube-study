@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/contents/Gsap.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1734447463547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734447475389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n const Gsap = () => {\r\n     return (\r\n         <section id=\"gsap\">\r\n             <h2>🤓 GSAP 패럴랙스 효과를 하고 싶다면!</h2>\r\n-            <div className=\"video__inner\">\r\n+            <div className=\"video-inner\">\r\n                 {gsapText.map((video, key) => (\r\n                     <div className=\"video\" key={key}>\r\n                         <div className=\"video-thumb play-icon\">\r\n                             <Link to={`/video/${video.videoId}`}>\r\n"
+                }
+            ],
+            "date": 1734447463547,
+            "name": "Commit-0",
+            "content": "import React from \"react\"\r\n\r\nimport { gsapText } from \"../../data/gsap\"\r\nimport { Link } from \"react-router-dom\"\r\n\r\nconst Gsap = () => {\r\n    return (\r\n        <section id=\"gsap\">\r\n            <h2>🤓 GSAP 패럴랙스 효과를 하고 싶다면!</h2>\r\n            <div className=\"video__inner\">\r\n                {gsapText.map((video, key) => (\r\n                    <div className=\"video\" key={key}>\r\n                        <div className=\"video-thumb play-icon\">\r\n                            <Link to={`/video/${video.videoId}`}>\r\n                                <img src={video.img} alt={video.title} />\r\n                            </Link>\r\n                        </div>\r\n                    </div>\r\n                ))}\r\n            </div>\r\n        </section>\r\n    )\r\n}\r\n\r\nexport default Gsap;\r\n"
+        }
+    ]
+}

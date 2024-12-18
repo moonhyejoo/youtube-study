@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/pages/Port.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1734453554982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734453575334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,20 @@\n import VideoCards from \"../components/video/VideoCard\"\r\n import { portfolioText } from \"../data/portfolio\"\r\n \r\n const Port = () => {\r\n+\r\n+    const [loading, setLoading] = useState(true);\r\n+\r\n+    useEffect(() => {\r\n+        setTimeout(() => {\r\n+            setLoading(false);\r\n+        }, 300);\r\n+    }, []);\r\n+\r\n+    const portPageClass = loading ? \"isLoading\" : \"isLoaded\";\r\n+\r\n+\r\n     return (\r\n         <Main\r\n             title=\"포트폴리오 사이트\"\r\n             description=\"포트폴리오 사이트 튜토리얼 강의입니다.\">ㅌ\r\n"
+                },
+                {
+                    "date": 1734453595683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,14 @@\n     return (\r\n         <Main\r\n             title=\"포트폴리오 사이트\"\r\n             description=\"포트폴리오 사이트 튜토리얼 강의입니다.\">ㅌ\r\n-            Port\r\n+            <section id=\"portPage\" className={portPageClass}>\r\n+                <h2>😄 웹디자인기능사 한번에 따자!</h2>\r\n+                <div className=\"video-inner\">\r\n+                    <VideoCards videos={webdText} />\r\n+                </div>\r\n+            </section>\r\n         </Main>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1734453606147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         <Main\r\n             title=\"포트폴리오 사이트\"\r\n             description=\"포트폴리오 사이트 튜토리얼 강의입니다.\">ㅌ\r\n             <section id=\"portPage\" className={portPageClass}>\r\n-                <h2>😄 웹디자인기능사 한번에 따자!</h2>\r\n+                <h2>🤗 포트폴리오 만드는 방법을 공유합니다.</h2>\r\n                 <div className=\"video-inner\">\r\n                     <VideoCards videos={webdText} />\r\n                 </div>\r\n             </section>\r\n"
+                },
+                {
+                    "date": 1734453612441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React from 'react'\r\n+import React, { useEffect, useState } from 'react'\r\n import Main from '../components/section/Main'\r\n \r\n import VideoCards from \"../components/video/VideoCard\"\r\n import { portfolioText } from \"../data/portfolio\"\r\n"
+                },
+                {
+                    "date": 1734453618737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             description=\"포트폴리오 사이트 튜토리얼 강의입니다.\">ㅌ\r\n             <section id=\"portPage\" className={portPageClass}>\r\n                 <h2>🤗 포트폴리오 만드는 방법을 공유합니다.</h2>\r\n                 <div className=\"video-inner\">\r\n-                    <VideoCards videos={webdText} />\r\n+                    <VideoCards videos={portfolioText} />\r\n                 </div>\r\n             </section>\r\n         </Main>\r\n     )\r\n"
+                },
+                {
+                    "date": 1734453638361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n \r\n     return (\r\n         <Main\r\n             title=\"포트폴리오 사이트\"\r\n-            description=\"포트폴리오 사이트 튜토리얼 강의입니다.\">ㅌ\r\n+            description=\"포트폴리오 사이트 튜토리얼 강의입니다.\">\r\n             <section id=\"portPage\" className={portPageClass}>\r\n                 <h2>🤗 포트폴리오 만드는 방법을 공유합니다.</h2>\r\n                 <div className=\"video-inner\">\r\n                     <VideoCards videos={portfolioText} />\r\n"
+                }
+            ],
+            "date": 1734453554982,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport Main from '../components/section/Main'\r\n\r\nimport VideoCards from \"../components/video/VideoCard\"\r\nimport { portfolioText } from \"../data/portfolio\"\r\n\r\nconst Port = () => {\r\n    return (\r\n        <Main\r\n            title=\"포트폴리오 사이트\"\r\n            description=\"포트폴리오 사이트 튜토리얼 강의입니다.\">ㅌ\r\n            Port\r\n        </Main>\r\n    )\r\n}\r\n\r\nexport default Port\r\n"
+        }
+    ]
+}
